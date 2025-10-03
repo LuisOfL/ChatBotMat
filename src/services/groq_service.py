@@ -2,7 +2,7 @@ import os
 import requests
 from typing import List, Dict, Any
 
-GROQ_API_KEY = os.getenv("GROQ_API_KEY", "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")  #La llave, si no deja subirla github, pon cualquier cosa y sube
+GROQ_API_KEY = os.getenv("GROQ_API_KEY", "jey")  #La llave, si no deja subirla github, pon cualquier cosa y sube
 GROQ_API_URL = "https://api.groq.com/openai/v1/chat/completions"
 
 class GroqService:
