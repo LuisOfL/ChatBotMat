@@ -41,17 +41,5 @@ def Composer(text, set_text, on_send, is_loading):
                 "on_click": lambda e: on_send(),
                 "disabled": is_loading or not text.strip(),
             }, "Enviar"),
-            html.button({
-                "class_name": "button",
-                "type": "button",
-                "on_click": lambda e: print("Botón + presionado"),
-                "disabled": is_loading,
-            }, "+"),
-            html.button({
-                "class_name": "button",
-                "type": "button",
-                "on_click": lambda e: print("Botón micrófono presionado"),
-                "disabled": is_loading,
-            }, "🎤"),
         )
     )
