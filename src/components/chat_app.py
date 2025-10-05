@@ -11,7 +11,7 @@ def ChatApp():
         {
             "id": 1, 
             "sender": "other", 
-            "text": "¡Hola! Soy tu asistente IA. ¿En qué puedo ayudarte?", 
+            "text": "¡Hola! Soy un ChatBot experto en matematicas. ¿En qué puedo ayudarte?", 
             "ts": get_current_timestamp()
         },
     ])
@@ -19,14 +19,14 @@ def ChatApp():
     is_loading, set_loading = hooks.use_state(False)
 
     async def get_groq_response():
-        """Obtiene respuesta de Groq de forma asíncrona"""
+       
         set_loading(True)
         
 
         await asyncio.sleep(0.5)
         
         def _process_response(prev_messages):
-            # Llamar a la API de Groq
+    
             groq_response = groq_service.call_api(prev_messages)
             
       
@@ -66,7 +66,7 @@ def ChatApp():
             html.div({"class_name": "header"},
                 html.div({"class_name": "avatar"}),
                 html.div({"class_name": "title"},
-                    html.span({"class_name": "name"}, "Chat con Groq"),
+                    html.span({"class_name": "name"}, "ChatBot Mat"),
                     html.span({"class_name": "status"}, 
                          "Escribiendo..." if is_loading else "Conectado"
                     ),
