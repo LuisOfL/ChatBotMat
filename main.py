@@ -6,7 +6,7 @@ from reactpy import html
 from src.styles.css import CSS
 from src.components.chat_app import ChatApp
 
-app = FastAPI(title="Chat con Groq")
+app = FastAPI(title="ChatBot Mat")
 
 configure(
     app,
