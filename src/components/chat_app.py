@@ -22,14 +22,14 @@ def ChatApp():
         """Obtiene respuesta de Groq de forma asíncrona"""
         set_loading(True)
         
-        # Pequeña pausa para que se muestre el indicador de carga
+
         await asyncio.sleep(0.5)
         
         def _process_response(prev_messages):
             # Llamar a la API de Groq
             groq_response = groq_service.call_api(prev_messages)
             
-            # Agregar la respuesta de Groq
+      
             new_message = {
                 "id": (prev_messages[-1]["id"] + 1) if prev_messages else 1,
                 "sender": "other",
@@ -58,7 +58,7 @@ def ChatApp():
         set_messages(_append_user_message)
         set_text("")
         
-        # Llamar a Groq después de enviar el mensaje del usuario
+
         asyncio.create_task(get_groq_response())
 
     return html.div({"class_name": "page"},
