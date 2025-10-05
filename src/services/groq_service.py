@@ -49,7 +49,7 @@ Siempre responde en el mismo idioma que el usuario."""
             "messages": formatted_messages,  # Ahora incluye el system prompt
             "model": "llama-3.1-8b-instant",
             "temperature": 0.7,
-            "max_tokens": 1024,
+            "max_tokens": 10024,
             "top_p": 1,
             "stream": False
         }
